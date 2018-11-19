@@ -17,6 +17,8 @@ import util
 import random
 import busters
 import game
+import numpy as np
+import scipy.stats
 
 class InferenceModule:
     """
@@ -265,17 +267,23 @@ class ParticleFilter(InferenceModule):
         weight with each position) is incorrect and may produce errors.
         """
         "*** YOUR CODE HERE ***"
-        self.ls_particles = []
-        i = 0
-        while i < self.numParticles:
-            for p in self.legalPositions:
-                if i < self.numParticles:
-                    self.ls_particles.append(p)
-                    i = i+1
+        uniform = []
+        numPart = self.numParticles
+
+        while numPart > 0:
+
+            if numPart > len(self.legalPositions):
+                uniform += self.legalPositions
+                numPart -= len(self.legalPositions)
+            else:
+                uniform += self.legalPositions[0:numPart]
+                numPart = 0
+
+        self.particles = uniform
     def observe(self, observation, gameState):
         """
         Update beliefs based on the given distance observation. Make sure to
-        handle the special case where all particles have weight 0 after
+        handle the special case where all part      icles have weight 0 after
         reweighting based on observation. If this happens, resample particles
         uniformly at random from the set of legal positions
         (self.legalPositions).
@@ -302,27 +310,85 @@ class ParticleFilter(InferenceModule):
         noisyDistance = observation
         emissionModel = busters.getObservationDistribution(noisyDistance)
         pacmanPosition = gameState.getPacmanPosition()
-        allPossible = util.Counter()
-        beliefs = self.getBeliefDistribution()
+        # allPossible = util.Counter()
+        # bin = util.Counter()
+        # beliefs = self.getBeliefDistribution()
+        # n_kld = 0
+        # k = 0
+        # d = 0.99
+        # e = 0.4
+        #
+        # if noisyDistance == None:
+        #     self.ls_particles = [self.getJailPosition()] * self.numParticles
+        # else:
+        #     for p in self.legalPositions:
+        #         trueDistance = util.manhattanDistance(p, pacmanPosition)
+        #         if emissionModel[trueDistance] > 0:
+        #             allPossible[p] += emissionModel[trueDistance] * beliefs[p]
+        #     if any(allPossible.values()):
+        #         l_particles = []
+        #         for p in range(0,self.numParticles):
+        #             sample= util.sample(allPossible)
+        #             l_particles.append(sample)
+        #         # # if bin[sample] != 'NE':
+        #         #     k = k+1
+        #         #     # bin[sample] ='NE'
+        #         #     if k >1 :
+        #         #         q = scipy.stats.norm.ppf(d)
+        #         #         # q =2.575829
+        #         #         t = (1.0-(2.0/9.0*(k-1))+np.sqrt(2.0/9.0*(k-1))* q)
+        #         #         n_kld = int(((k - 1)/(2.0*e))* ((t)**3))
+        #         #     # print n_kld
+        #         #         self.numParticles =n_kld
+        #         print "NP",self.numParticles
+        #         self.ls_particles =  l_particles
+        #     else:
+        #         self.initializeUniformly(allPossible)
+        #
+        # # util.raiseNotDefined()
+        beliefs = util.Counter()
+        bin = util.Counter()
+        n_kld = 0
+        k = 0
+        d = 0.99
+        e = 0.01
+        n = 0
+        nK = 1900
+        ls_particles = []
 
         if noisyDistance == None:
-            self.ls_particles = [self.getJailPosition()] * self.numParticles
+            self.particles = [self.getJailPosition() for i in
+                              range(self.numParticles)]  # sending all particles to jail case
+
         else:
-            for p in self.legalPositions:
-                trueDistance = util.manhattanDistance(p, pacmanPosition)
-                if emissionModel[trueDistance] > 0:
-                    allPossible[p] += emissionModel[trueDistance] * beliefs[p]
-            if any(allPossible.values()):
-                l_particles = []
-                for p in range(0,self.numParticles):
-                    sample= util.sample(allPossible)
-                    l_particles.append(sample)
-                self.ls_particles =  l_particles
+            for i in range(self.numParticles):  # for all the particles
+                beliefs[self.particles[i]] += 1  # weighing the particles
+
+            for b in beliefs:
+                trueDistance = util.manhattanDistance(b, pacmanPosition)  # getting true distance
+                beliefs[b] *= emissionModel[trueDistance]  # multiplying by emissionModel
+
+            if beliefs.totalCount() == 0:  # if weights are 0,
+                self.initializeUniformly(gameState)  # initialize uniformly
             else:
-                self.initializeUniformly(allPossible)
-
-        # util.raiseNotDefined()
-
+                # for i in range(self.numParticles):
+                condition = True
+                while condition:
+                    sample = util.sample(beliefs)  # else, resample all the particles
+                    ls_particles.append(sample)
+                    if bin[sample] != 'NE':
+                        k = k+1
+                        bin[sample] ='NE'
+                        if k >1 :
+                            q = scipy.stats.norm.ppf(d)
+                            # q =2.575829
+                            t = (1.0-(2.0/9.0*(k-1))+np.sqrt(2.0/9.0*(k-1))* q)
+                            n_kld = int(((k - 1)/(2.0*e))* ((t)**3))
+                            # print "kld",n_kld
+                    n = n + 1
+                    condition = (n<nK)
+                self.particles = ls_particles
+                self.numParticles = nK
 
     def elapseTime(self, gameState):
         """
@@ -340,12 +406,8 @@ class ParticleFilter(InferenceModule):
         """
         "*** YOUR CODE HERE ***"
         # util.raiseNotDefined()
-        l_particles = []
-        for p in self.ls_particles:
-            newPos = self.getPositionDistribution(self.setGhostPosition(gameState, p))
-            sample =util.sample(newPos)
-            l_particles.append(sample)
-        self.ls_particles =  l_particles
+        self.particles = [util.sample(self.getPositionDistribution(self.setGhostPosition(gameState, oldPos))) for oldPos in self.particles]
+
 
     def getBeliefDistribution(self):
         """
@@ -355,12 +417,14 @@ class ParticleFilter(InferenceModule):
         Counter object)
         """
         "*** YOUR CODE HERE ***"
-        allPossible = util.Counter()
-        for p in self.ls_particles:
-            allPossible[p] = allPossible[p] + 1
+        beliefDistribution = util.Counter()
 
-        allPossible.normalize()
-        return allPossible
+        for particle in self.particles:  # in particle list
+            beliefDistribution[particle] += 1  # weighing all the particles
+        beliefDistribution.normalize()  # normalizing
+
+        return beliefDistribution  # returns distribution
+
         # util.raiseNotDefined()
 
 class MarginalInference(InferenceModule):
@@ -444,6 +508,7 @@ class JointParticleFilter:
             for p in poss:
                 if i < self.numParticles:
                     self.particles.append(p)
+                    print len(self.particles) ,self.numParticles
                     i = i+1
                 else:
                     break
@@ -514,8 +579,10 @@ class JointParticleFilter:
         else:
             allPossible.normalize()
             dist = []
+
             for p in range(self.numParticles):
                 dist.append(util.sample(allPossible))
+
             self.particles = dist
 
 
