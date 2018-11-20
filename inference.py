@@ -19,6 +19,7 @@ import busters
 import game
 import numpy as np
 import scipy.stats
+import time
 
 class InferenceModule:
     """
@@ -247,6 +248,7 @@ class ParticleFilter(InferenceModule):
     """
 
     def __init__(self, ghostAgent, numParticles=300):
+        print "Start time",time.time()
         InferenceModule.__init__(self, ghostAgent);
         self.setNumParticles(numParticles)
 
@@ -310,55 +312,20 @@ class ParticleFilter(InferenceModule):
         noisyDistance = observation
         emissionModel = busters.getObservationDistribution(noisyDistance)
         pacmanPosition = gameState.getPacmanPosition()
-        # allPossible = util.Counter()
-        # bin = util.Counter()
-        # beliefs = self.getBeliefDistribution()
-        # n_kld = 0
-        # k = 0
-        # d = 0.99
-        # e = 0.4
-        #
-        # if noisyDistance == None:
-        #     self.ls_particles = [self.getJailPosition()] * self.numParticles
-        # else:
-        #     for p in self.legalPositions:
-        #         trueDistance = util.manhattanDistance(p, pacmanPosition)
-        #         if emissionModel[trueDistance] > 0:
-        #             allPossible[p] += emissionModel[trueDistance] * beliefs[p]
-        #     if any(allPossible.values()):
-        #         l_particles = []
-        #         for p in range(0,self.numParticles):
-        #             sample= util.sample(allPossible)
-        #             l_particles.append(sample)
-        #         # # if bin[sample] != 'NE':
-        #         #     k = k+1
-        #         #     # bin[sample] ='NE'
-        #         #     if k >1 :
-        #         #         q = scipy.stats.norm.ppf(d)
-        #         #         # q =2.575829
-        #         #         t = (1.0-(2.0/9.0*(k-1))+np.sqrt(2.0/9.0*(k-1))* q)
-        #         #         n_kld = int(((k - 1)/(2.0*e))* ((t)**3))
-        #         #     # print n_kld
-        #         #         self.numParticles =n_kld
-        #         print "NP",self.numParticles
-        #         self.ls_particles =  l_particles
-        #     else:
-        #         self.initializeUniformly(allPossible)
-        #
-        # # util.raiseNotDefined()
         beliefs = util.Counter()
         bin = util.Counter()
         n_kld = 0
-        k = 0
+        k = 1
         d = 0.99
-        e = 0.01
+        e = 0.06
         n = 0
-        nK = 1900
+        nK = 5000
         ls_particles = []
 
         if noisyDistance == None:
             self.particles = [self.getJailPosition() for i in
                               range(self.numParticles)]  # sending all particles to jail case
+            print "End time", time.time()
 
         else:
             for i in range(self.numParticles):  # for all the particles
@@ -371,7 +338,10 @@ class ParticleFilter(InferenceModule):
             if beliefs.totalCount() == 0:  # if weights are 0,
                 self.initializeUniformly(gameState)  # initialize uniformly
             else:
-                # for i in range(self.numParticles):
+            #Traditional sampling
+                # self.particles = [util.sample(beliefs) for i in range(self.numParticles)] #else, resample all the particles
+
+            # Adaptive Monte Carlo sampling
                 condition = True
                 while condition:
                     sample = util.sample(beliefs)  # else, resample all the particles
@@ -381,14 +351,13 @@ class ParticleFilter(InferenceModule):
                         bin[sample] ='NE'
                         if k >1 :
                             q = scipy.stats.norm.ppf(d)
-                            # q =2.575829
                             t = (1.0-(2.0/9.0*(k-1))+np.sqrt(2.0/9.0*(k-1))* q)
                             n_kld = int(((k - 1)/(2.0*e))* ((t)**3))
-                            # print "kld",n_kld
                     n = n + 1
-                    condition = (n<nK)
+                    condition = (n<n_kld)and (n<nK)
                 self.particles = ls_particles
-                self.numParticles = nK
+                # print "self.particles",len(self.particles)
+                self.numParticles = n_kld
 
     def elapseTime(self, gameState):
         """
