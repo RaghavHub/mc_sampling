@@ -19,7 +19,7 @@ import busters
 import game
 import numpy as np
 import scipy.stats
-import time
+import matplotlib.pyplot as plt
 
 class InferenceModule:
     """
@@ -36,6 +36,7 @@ class InferenceModule:
         self.ghostAgent = ghostAgent
         self.index = ghostAgent.index
         self.obs = [] # most recent observation position
+        self.particle_size = []
 
     def getJailPosition(self):
         return (2 * self.ghostAgent.index - 1, 1)
@@ -248,9 +249,19 @@ class ParticleFilter(InferenceModule):
     """
 
     def __init__(self, ghostAgent, numParticles=300):
-        print "Start time",time.time()
+
         InferenceModule.__init__(self, ghostAgent);
         self.setNumParticles(numParticles)
+        self.loop = 1
+
+    def __del__(self):
+        label = str('test case'+str(self.loop))
+        print label
+        plt.plot(np.arange(0,len(self.particle_size)),self.particle_size,label=label)
+        plt.legend()
+        plt.ylabel("Number of Particles")
+        plt.savefig("Adaptive particle filtering")
+        self.loop += 1
 
     def setNumParticles(self, numParticles):
         self.numParticles = numParticles
@@ -316,8 +327,8 @@ class ParticleFilter(InferenceModule):
         bin = util.Counter()
         n_kld = 0
         k = 1
-        d = 0.99
-        e = 0.06
+        d = 999.1/1000
+        e = 1.0/6
         n = 0
         nK = 5000
         ls_particles = []
@@ -325,7 +336,7 @@ class ParticleFilter(InferenceModule):
         if noisyDistance == None:
             self.particles = [self.getJailPosition() for i in
                               range(self.numParticles)]  # sending all particles to jail case
-            print "End time", time.time()
+            # print "End time", time.time()
 
         else:
             for i in range(self.numParticles):  # for all the particles
@@ -341,7 +352,7 @@ class ParticleFilter(InferenceModule):
             #Traditional sampling
                 # self.particles = [util.sample(beliefs) for i in range(self.numParticles)] #else, resample all the particles
 
-            # Adaptive Monte Carlo sampling
+            # # Adaptive Monte Carlo sampling
                 condition = True
                 while condition:
                     sample = util.sample(beliefs)  # else, resample all the particles
@@ -352,12 +363,13 @@ class ParticleFilter(InferenceModule):
                         if k >1 :
                             q = scipy.stats.norm.ppf(d)
                             t = (1.0-(2.0/9.0*(k-1))+np.sqrt(2.0/9.0*(k-1))* q)
-                            n_kld = int(((k - 1)/(2.0*e))* ((t)**3))
+                            n_kld = int(((k - 1)/(2.0*float(e)))* float((t)**3))
                     n = n + 1
                     condition = (n<n_kld)and (n<nK)
                 self.particles = ls_particles
-                # print "self.particles",len(self.particles)
+                print "self.particles",len(self.particles)
                 self.numParticles = n_kld
+                self.particle_size.append(len(self.particles))
 
     def elapseTime(self, gameState):
         """
@@ -477,7 +489,7 @@ class JointParticleFilter:
             for p in poss:
                 if i < self.numParticles:
                     self.particles.append(p)
-                    print len(self.particles) ,self.numParticles
+                    # print len(self.particles) ,self.numParticles
                     i = i+1
                 else:
                     break
@@ -529,6 +541,13 @@ class JointParticleFilter:
             return
         emissionModels = [busters.getObservationDistribution(dist) for dist in noisyDistances]
         "*** YOUR CODE HERE ***"
+        bin = util.Counter()
+        n_kld = 0
+        k = 1
+        d = 0.99
+        e = 1
+        n = 0
+        nK = 5000
         allPossible = util.Counter()
         for index,pos in enumerate(self.particles):
             w = 1.0
@@ -545,14 +564,32 @@ class JointParticleFilter:
                 for i in range(self.numGhosts):
                     if  noisyDistances[i]== None:
                         pos = self.getParticleWithGhostInJail(pos,i)
+
         else:
             allPossible.normalize()
             dist = []
 
-            for p in range(self.numParticles):
-                dist.append(util.sample(allPossible))
+            # for p in range(self.numParticles):
+            #     dist.append(util.sample(allPossible))
 
             self.particles = dist
+            condition = True
+            while condition:
+                sample = util.sample(allPossible)  # else, resample all the particles
+                dist.append(sample)
+                if bin[sample] != 'NE':
+                    k = k + 1
+                    bin[sample] = 'NE'
+                    if k > 1:
+                        q = scipy.stats.norm.ppf(d)
+                        t = (1.0 - (2.0 / 9.0 * (k - 1)) + np.sqrt(2.0 / 9.0 * (k - 1)) * q)
+                        n_kld = int(((k - 1) / (2.0 * e)) * ((t) ** 3))
+                n = n + 1
+                condition = (n < n_kld) and (n < nK)
+            self.particles = dist
+            print "self.particles",len(self.particles)
+            self.numParticles = n_kld
+            # print len(self.particles)
 
 
     def getParticleWithGhostInJail(self, particle, ghostIndex):
