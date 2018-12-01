@@ -323,39 +323,34 @@ class ParticleFilter(InferenceModule):
         noisyDistance = observation
         emissionModel = busters.getObservationDistribution(noisyDistance)
         pacmanPosition = gameState.getPacmanPosition()
-        beliefs = util.Counter()
+
         bin = util.Counter()
         n_kld = 0
         k = 1
-        d = 999.1/1000
-        e = 1.0/6
+        d = 999.1 / 1000
+        e = 1.0 / 6
         n = 0
         nK = 5000
         ls_particles = []
 
-        if noisyDistance == None:
-            self.particles = [self.getJailPosition() for i in
-                              range(self.numParticles)]  # sending all particles to jail case
-            # print "End time", time.time()
-
+        if noisyDistance == None: # Case 1
+            self.particles = [self.getJailPosition()] * self.numParticles
         else:
-            for i in range(self.numParticles):  # for all the particles
-                beliefs[self.particles[i]] += 1  # weighing the particles
-
-            for b in beliefs:
-                trueDistance = util.manhattanDistance(b, pacmanPosition)  # getting true distance
-                beliefs[b] *= emissionModel[trueDistance]  # multiplying by emissionModel
-
-            if beliefs.totalCount() == 0:  # if weights are 0,
-                self.initializeUniformly(gameState)  # initialize uniformly
+            allPossible, oldBelief = util.Counter(), self.getBeliefDistribution()
+            for location in self.legalPositions:
+                distance = util.manhattanDistance(location, pacmanPosition)
+                allPossible[location] += emissionModel[distance] * oldBelief[location]
+            if not any(allPossible.values()): # Case 2
+                self.initializeUniformly(gameState)
             else:
-            #Traditional sampling
-                # self.particles = [util.sample(beliefs) for i in range(self.numParticles)] #else, resample all the particles
-
-            # # Adaptive Monte Carlo sampling
+                # temp = []
+                # for _ in range(0, self.numParticles):
+                #     temp.append(util.sample(allPossible)) #recreate samples based on distribution allPossible
+                # self.particles = temp
+        # Adaptive Monte Carlo sampling
                 condition = True
                 while condition:
-                    sample = util.sample(beliefs)  # else, resample all the particles
+                    sample = util.sample(allPossible)  # else, resample all the particles
                     ls_particles.append(sample)
                     if bin[sample] != 'NE':
                         k = k+1
@@ -364,12 +359,15 @@ class ParticleFilter(InferenceModule):
                             q = scipy.stats.norm.ppf(d)
                             t = (1.0-(2.0/9.0*(k-1))+np.sqrt(2.0/9.0*(k-1))* q)
                             n_kld = int(((k - 1)/(2.0*float(e)))* float((t)**3))
+                            # print k
+                            # print n_kld
                     n = n + 1
                     condition = (n<n_kld)and (n<nK)
                 self.particles = ls_particles
-                print "self.particles",len(self.particles)
+                # print "self.particles",len(self.particles)
                 self.numParticles = n_kld
                 self.particle_size.append(len(self.particles))
+
 
     def elapseTime(self, gameState):
         """
@@ -549,6 +547,7 @@ class JointParticleFilter:
         n = 0
         nK = 5000
         allPossible = util.Counter()
+        self.particle_size = []
         for index,pos in enumerate(self.particles):
             w = 1.0
             for i in range(self.numGhosts):
@@ -571,10 +570,9 @@ class JointParticleFilter:
 
             # for p in range(self.numParticles):
             #     dist.append(util.sample(allPossible))
-
-            self.particles = dist
             condition = True
             while condition:
+                print allPossible
                 sample = util.sample(allPossible)  # else, resample all the particles
                 dist.append(sample)
                 if bin[sample] != 'NE':
@@ -587,8 +585,9 @@ class JointParticleFilter:
                 n = n + 1
                 condition = (n < n_kld) and (n < nK)
             self.particles = dist
-            print "self.particles",len(self.particles)
+            # print "self.particles",len(self.particles)
             self.numParticles = n_kld
+            self.particle_size.append(self.numParticles)
             # print len(self.particles)
 
 
