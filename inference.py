@@ -19,7 +19,15 @@ import busters
 import game
 import numpy as np
 import scipy.stats
-import matplotlib.pyplot as plt
+
+
+from sys import platform as sys_pf
+if sys_pf == 'darwin':
+    import matplotlib
+    matplotlib.use("TkAgg")
+    import matplotlib.pyplot as plt
+else:
+    import matplotlib.pyplot as plt
 
 class InferenceModule:
     """
@@ -251,6 +259,7 @@ class ParticleFilter(InferenceModule):
     def __init__(self, ghostAgent, numParticles=300):
 
         InferenceModule.__init__(self, ghostAgent);
+        self.particle_size = []
         self.setNumParticles(numParticles)
         self.loop = 1
 
