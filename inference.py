@@ -19,6 +19,7 @@ import busters
 import game
 import numpy as np
 import scipy.stats
+import pickle
 
 
 from sys import platform as sys_pf
@@ -28,6 +29,11 @@ if sys_pf == 'darwin':
     import matplotlib.pyplot as plt
 else:
     import matplotlib.pyplot as plt
+
+
+
+
+
 
 class InferenceModule:
     """
@@ -261,7 +267,21 @@ class ParticleFilter(InferenceModule):
         InferenceModule.__init__(self, ghostAgent);
         self.particle_size = []
         self.setNumParticles(numParticles)
-        self.loop = 1
+
+        filename = 'loop_counter.txt'
+
+        infile = open(filename, 'rb')
+        loop = pickle.load(infile)
+        infile.close()
+
+        self.loop = loop
+        loop = loop + 1
+
+        outfile = open(filename, 'wb')
+        pickle.dump(loop, outfile)
+        outfile.close()
+
+
 
     def __del__(self):
         label = str('test case'+str(self.loop))
@@ -270,7 +290,7 @@ class ParticleFilter(InferenceModule):
         plt.legend()
         plt.ylabel("Number of Particles")
         plt.savefig("Adaptive particle filtering")
-        self.loop += 1
+
 
     def setNumParticles(self, numParticles):
         self.numParticles = numParticles
