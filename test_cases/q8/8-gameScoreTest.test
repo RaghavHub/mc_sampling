@@ -18,7 +18,7 @@ layout_str: """
 
 observe: "True"
 elapse: "True"
-inference: "ParticleFilter"
+inference: "KLD_ParticleFilter"
 maxMoves: "100"
 numGhosts: "4"
 

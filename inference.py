@@ -255,12 +255,161 @@ class ExactInference(InferenceModule):
 """
 =======================================================================================================
 
+old ParticleFilter
+
+=======================================================================================================
+"""
+class ParticleFilter(InferenceModule):
+    """
+    A particle filter for approximately tracking a single ghost.
+
+    Useful helper functions will include random.choice, which chooses an element
+    from a list uniformly at random, and util.sample, which samples a key from a
+    Counter by treating its values as probabilities.
+    """
+
+    def __init__(self, ghostAgent, numParticles=300):
+
+
+        print "-----------------------------------------------------"
+
+        InferenceModule.__init__(self, ghostAgent);
+        self.setNumParticles(numParticles)
+
+    def setNumParticles(self, numParticles):
+        self.numParticles = numParticles
+
+
+    def initializeUniformly(self, gameState):
+        """
+        Initializes a list of particles. Use self.numParticles for the number of
+        particles. Use self.legalPositions for the legal board positions where a
+        particle could be located.  Particles should be evenly (not randomly)
+        distributed across positions in order to ensure a uniform prior.
+
+        Note: the variable you store your particles in must be a list; a list is
+        simply a collection of unweighted variables (positions in this case).
+        Storing your particles as a Counter (where there could be an associated
+        weight with each position) is incorrect and may produce errors.
+        """
+        "*** YOUR CODE HERE ***"
+        l_pos = self.legalPositions
+        num = self.numParticles
+        self.particleList = [l_pos[i % len(l_pos)] for i in range(num)]
+
+
+
+
+
+    def observe(self, observation, gameState):
+        """
+        Update beliefs based on the given distance observation. Make sure to
+        handle the special case where all particles have weight 0 after
+        reweighting based on observation. If this happens, resample particles
+        uniformly at random from the set of legal positions
+        (self.legalPositions).
+
+        A correct implementation will handle two special cases:
+          1) When a ghost is captured by Pacman, all particles should be updated
+             so that the ghost appears in its prison cell,
+             self.getJailPosition()
+
+             As before, you can check if a ghost has been captured by Pacman by
+             checking if it has a noisyDistance of None.
+
+          2) When all particles receive 0 weight, they should be recreated from
+             the prior distribution by calling initializeUniformly. The total
+             weight for a belief distribution can be found by calling totalCount
+             on a Counter object
+
+        util.sample(Counter object) is a helper method to generate a sample from
+        a belief distribution.
+
+        You may also want to use util.manhattanDistance to calculate the
+        distance between a particle and Pacman's position.
+        """
+        noisyDistance = observation
+        emissionModel = busters.getObservationDistribution(noisyDistance)
+        pacmanPosition = gameState.getPacmanPosition()
+        "*** YOUR CODE HERE ***"
+
+        belief_distrib =  self.getBeliefDistribution()
+
+        newParticles = []
+
+        if noisyDistance == None:
+            newParticles= [self.getJailPosition() for _ in range(self.numParticles)] # all particels = JailPosition
+        else:
+            allPossible = util.Counter()
+
+            for pos in self.legalPositions:
+                distance = util.manhattanDistance(pacmanPosition, pos)
+                allPossible[pos] = emissionModel[distance] * belief_distrib[pos]
+
+            if sum(allPossible.values()) != 0:
+                newParticles = [util.sample(allPossible) for _ in range(self.numParticles)]
+
+            else:
+                self.initializeUniformly(gameState)
+                return
+
+
+        self.particleList = newParticles
+
+    def elapseTime(self, gameState):
+        """
+        Update beliefs for a time step elapsing.
+
+        As in the elapseTime method of ExactInference, you should use:
+
+          newPosDist = self.getPositionDistribution(self.setGhostPosition(gameState, oldPos))
+
+        to obtain the distribution over new positions for the ghost, given its
+        previous position (oldPos) as well as Pacman's current position.
+
+        util.sample(Counter object) is a helper method to generate a sample from
+        a belief distribution.
+        """
+        "*** YOUR CODE HERE ***"
+
+        newPosDist = lambda oldPos : self.getPositionDistribution(self.setGhostPosition(gameState, oldPos))
+
+        self.particleList = [util.sample(  newPosDist(oldPos)  ) for oldPos in self.particleList]
+
+        # self.particleList = [util.nSample(  newPosDist(oldPos).values(), newPosDist(oldPos).keys(), 1   )[0] for oldPos in self.particleList]
+
+
+
+    def getBeliefDistribution(self):
+        """
+        Return the agent's current belief state, a distribution over ghost
+        locations conditioned on all evidence and time passage. This method
+        essentially converts a list of particles into a belief distribution (a
+        Counter object)
+        """
+        "*** YOUR CODE HERE ***"
+
+        belief_distribution = util.Counter()
+
+        for particle in self.particleList:
+            belief_distribution[particle] += 1
+
+        belief_distribution.normalize()
+
+        return belief_distribution
+
+
+
+
+
+"""
+=======================================================================================================
+
 KLD-Sampling
 
 =======================================================================================================
 """
-
-class ParticleFilter(InferenceModule):
+class ParticleFilter_27272727(InferenceModule):
     """
     A particle filter for approximately tracking a single ghost.
 
