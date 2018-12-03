@@ -34,7 +34,6 @@ else:
 
 
 
-
 class InferenceModule:
     """
     An inference module tracks a belief distribution over a ghost's location.
@@ -253,6 +252,14 @@ class ExactInference(InferenceModule):
     def getBeliefDistribution(self):
         return self.beliefs
 
+"""
+=======================================================================================================
+
+KLD-Sampling
+
+=======================================================================================================
+"""
+
 class ParticleFilter(InferenceModule):
     """
     A particle filter for approximately tracking a single ghost.
@@ -280,7 +287,6 @@ class ParticleFilter(InferenceModule):
         outfile = open(filename, 'wb')
         pickle.dump(loop, outfile)
         outfile.close()
-
 
 
     def __del__(self):
@@ -322,6 +328,9 @@ class ParticleFilter(InferenceModule):
                 numPart = 0
 
         self.particles = uniform
+
+
+
     def observe(self, observation, gameState):
         """
         Update beliefs based on the given distance observation. Make sure to
