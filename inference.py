@@ -259,7 +259,7 @@ old ParticleFilter
 
 =======================================================================================================
 """
-class ParticleFilter(InferenceModule):
+class ParticleFilter_old(InferenceModule):
     """
     A particle filter for approximately tracking a single ghost.
 
@@ -409,7 +409,7 @@ KLD-Sampling
 
 =======================================================================================================
 """
-class ParticleFilter_27272727(InferenceModule):
+class ParticleFilter(InferenceModule):
     """
     A particle filter for approximately tracking a single ghost.
 

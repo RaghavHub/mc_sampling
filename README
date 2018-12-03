@@ -1,2 +1,26 @@
-python autograder.py -q q4 --no-graphics
-python autograder.py -q q5 --no-graphics
+Adaptive  Sampling  Technique  using  KullbackLeibler  divergence
+
+Arun Vignesh Malarkkan()
+Gowtham Sekkilar(1215181396)
+Raghavendran Ramakrishnan(1215325696)
+Faisal Alatawi(1215360666)
+
+Arizona State University
+Dec 3, 2018
+
+
+* To run the code:
+
+    -To test the code:
+    python KLD_run.py
+
+    -To run q4 (from project 4) :
+    python KLD_run.py  -q q4
+
+        - note add (--no-graphics) to turn off the graphics : python KLD_run.py  -q q4 --no-graphics
+
+    -To run q5 (from project 4):
+    python KLD_run.py  -q q5
+
+        - note add (--no-graphics) to turn off the graphics : python KLD_run.py  -q q5 --no-graphics
+

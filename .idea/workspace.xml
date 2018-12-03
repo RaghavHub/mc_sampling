@@ -2,27 +2,103 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57668349-0859-4e4c-87bd-7f10c4371a25" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test_cases/q8/1-ParticleObserve.solution" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_cases/q8/1-ParticleObserve.test" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_cases/q8/2-ParticleObserve.solution" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_cases/q8/2-ParticleObserve.test" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_cases/q8/3-ParticleObserve.solution" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_cases/q8/3-ParticleObserve.test" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_cases/q8/4-ParticleObserve.solution" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_cases/q8/4-ParticleObserve.test" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_cases/q8/5-ParticleObserve.solution" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_cases/q8/5-ParticleObserve.test" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_cases/q8/6-ParticleObserve.solution" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_cases/q8/6-ParticleObserve.test" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_cases/q8/7-ParticleObserve.solution" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_cases/q8/7-ParticleObserve.test" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_cases/q8/CONFIG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KLD_run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/CONFIG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/q4/1-ParticleObserve.test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/q4/2-ParticleObserve.test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/q4/3-ParticleObserve.test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/q4/4-ParticleObserve.test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/q4/5-ParticleObserve.test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/q4/6-ParticleObserve.test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/q4/7-ParticleObserve.test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/q5/1-ParticleElapse.solution" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/q5/1-ParticleElapse.test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/q5/2-ParticleElapse.solution" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/q5/2-ParticleElapse.test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/q5/3-ParticleElapse.solution" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/q5/3-ParticleElapse.test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/q5/4-ParticleElapse.solution" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/q5/4-ParticleElapse.test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/q5/5-ParticleElapse.solution" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/q5/5-ParticleElapse.test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/q5/6-ParticleElapse.solution" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/q5/6-ParticleElapse.test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/q7/CONFIG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/q8/1-ParticleObserve.solution" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/q8/2-ParticleObserve.solution" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/q8/3-ParticleObserve.solution" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/q8/4-ParticleObserve.solution" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/q8/5-ParticleObserve.solution" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/q8/6-ParticleObserve.solution" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/q8/7-ParticleObserve.solution" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases_old/q8/CONFIG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Adaptive particle filtering.png" beforeDir="false" afterPath="$PROJECT_DIR$/Adaptive particle filtering.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README" beforeDir="false" afterPath="$PROJECT_DIR$/README" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VERSION" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/inference.py" beforeDir="false" afterPath="$PROJECT_DIR$/inference.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loop_counter.txt" beforeDir="false" afterPath="$PROJECT_DIR$/loop_counter.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q3/8-gameScoreTest.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases/q8/8-gameScoreTest.solution" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q3/8-gameScoreTest.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases/q8/8-gameScoreTest.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/CONFIG" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases/CONFIG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q1/1-ExactObserve.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q1/1-ExactObserve.solution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q1/1-ExactObserve.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q1/1-ExactObserve.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q1/2-ExactObserve.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q1/2-ExactObserve.solution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q1/2-ExactObserve.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q1/2-ExactObserve.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q1/3-ExactObserve.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q1/3-ExactObserve.solution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q1/3-ExactObserve.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q1/3-ExactObserve.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q1/4-ExactObserve.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q1/4-ExactObserve.solution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q1/4-ExactObserve.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q1/4-ExactObserve.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q1/CONFIG" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q1/CONFIG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q2/1-ExactElapse.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q2/1-ExactElapse.solution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q2/1-ExactElapse.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q2/1-ExactElapse.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q2/2-ExactElapse.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q2/2-ExactElapse.solution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q2/2-ExactElapse.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q2/2-ExactElapse.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q2/3-ExactElapse.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q2/3-ExactElapse.solution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q2/3-ExactElapse.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q2/3-ExactElapse.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q2/4-ExactElapse.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q2/4-ExactElapse.solution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q2/4-ExactElapse.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q2/4-ExactElapse.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q2/CONFIG" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q2/CONFIG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q3/1-ExactObserveElapse.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q3/1-ExactObserveElapse.solution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q3/1-ExactObserveElapse.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q3/1-ExactObserveElapse.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q3/2-ExactObserveElapse.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q3/2-ExactObserveElapse.solution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q3/2-ExactObserveElapse.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q3/2-ExactObserveElapse.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q3/3-gameScoreTest.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q3/3-gameScoreTest.solution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q3/3-gameScoreTest.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q3/3-gameScoreTest.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q3/CONFIG" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q3/CONFIG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q6/1-JointParticleObserve.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q6/1-JointParticleObserve.solution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q6/1-JointParticleObserve.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q6/1-JointParticleObserve.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q6/2-JointParticleObserve.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q6/2-JointParticleObserve.solution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q6/2-JointParticleObserve.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q6/2-JointParticleObserve.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q6/3-JointParticleObserve.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q6/3-JointParticleObserve.solution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q6/3-JointParticleObserve.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q6/3-JointParticleObserve.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q6/4-JointParticleObserve.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q6/4-JointParticleObserve.solution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q6/4-JointParticleObserve.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q6/4-JointParticleObserve.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q6/5-JointParticleObserve.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q6/5-JointParticleObserve.solution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q6/5-JointParticleObserve.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q6/5-JointParticleObserve.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q6/CONFIG" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q5/CONFIG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/1-JointParticleElapse.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q7/1-JointParticleElapse.solution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/1-JointParticleElapse.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q7/1-JointParticleElapse.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/2-JointParticleElapse.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q7/2-JointParticleElapse.solution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/2-JointParticleElapse.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q7/2-JointParticleElapse.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/3-JointParticleObserveElapse.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q7/3-JointParticleObserveElapse.solution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/3-JointParticleObserveElapse.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q7/3-JointParticleObserveElapse.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/CONFIG" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q6/CONFIG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/1-ParticleObserve.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q4/1-ParticleObserve.solution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/1-ParticleObserve.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q8/1-ParticleObserve.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/2-ParticleObserve.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q4/2-ParticleObserve.solution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/2-ParticleObserve.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q8/2-ParticleObserve.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/3-ParticleObserve.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q4/3-ParticleObserve.solution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/3-ParticleObserve.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q8/3-ParticleObserve.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/4-ParticleObserve.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q4/4-ParticleObserve.solution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/4-ParticleObserve.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q8/4-ParticleObserve.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/5-ParticleObserve.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q4/5-ParticleObserve.solution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/5-ParticleObserve.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q8/5-ParticleObserve.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/6-ParticleObserve.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q4/6-ParticleObserve.solution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/6-ParticleObserve.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q8/6-ParticleObserve.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/7-ParticleObserve.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q4/7-ParticleObserve.solution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/7-ParticleObserve.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q8/7-ParticleObserve.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/8-gameScoreTest.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q8/8-gameScoreTest.solution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/8-gameScoreTest.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q8/8-gameScoreTest.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/CONFIG" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases_old/q4/CONFIG" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,78 +130,66 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inference.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="273" column="68" selection-start-line="273" selection-start-column="68" selection-end-line="273" selection-end-column="68" />
+            <state relative-caret-position="253">
+              <caret line="411" column="20" selection-start-line="411" selection-start-column="20" selection-end-line="411" selection-end-column="20" />
               <folding>
                 <element signature="e#656#672#0" expanded="true" />
-                <marker date="1543808985869" expanded="true" signature="967:971" ph="..." />
-                <marker date="1543808985869" expanded="true" signature="16615:16624" ph="..." />
+                <marker date="1543865629631" expanded="true" signature="967:971" ph="..." />
+                <marker date="1543865629631" expanded="true" signature="16610:16619" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/graphicsDisplay.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-237" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="mock:///Users/faisal/Library/Caches/PyCharm2018.3/snapshots/mc_sampling9.pstat">
-          <provider selected="true" editor-type-id="profiler-session-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grading.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-921">
-              <caret line="51" selection-start-line="51" selection-end-line="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/autograder.py">
+        <entry file="file://$PROJECT_DIR$/README">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="202" column="42" selection-start-line="202" selection-start-column="42" selection-end-line="202" selection-end-column="42" />
+            <state relative-caret-position="390">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/trackingTestClasses.py">
+        <entry file="file://$PROJECT_DIR$/util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="140" selection-start-line="140" selection-end-line="140" />
+            <state relative-caret-position="7005">
+              <caret line="470" column="4" selection-start-line="470" selection-start-column="4" selection-end-line="470" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bustersAgents.py">
+        <entry file="file://$PROJECT_DIR$/KLD_run.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_cases/q8/8-gameScoreTest.test">
+        <entry file="file://$PROJECT_DIR$/test_cases/q4/7-ParticleObserve.test">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+            <state relative-caret-position="345">
+              <caret line="23" column="26" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/layouts/smallHunt.lay">
+        <entry file="file://$PROJECT_DIR$/test_cases/q4/7-ParticleObserve.solution">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_cases/q8/8-gameScoreTest.solution">
+        <entry file="file://$PROJECT_DIR$/test_cases/q4/8-gameScoreTest.solution">
           <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_cases/CONFIG">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="13" selection-start-column="13" selection-end-column="13" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -162,6 +226,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -172,8 +237,6 @@
         <option value="$PROJECT_DIR$/test_cases/q4/1-ParticleObserve.test" />
         <option value="$PROJECT_DIR$/test_cases/q4/4-ParticleObserve.test" />
         <option value="$PROJECT_DIR$/dogs" />
-        <option value="$PROJECT_DIR$/test_cases/q4/8-gameScoreTest.test" />
-        <option value="$PROJECT_DIR$/loop_counter.txt" />
         <option value="$PROJECT_DIR$/test_cases/q8/1-ParticleObserve.test" />
         <option value="$PROJECT_DIR$/test_cases/q8/2-ParticleObserve.test" />
         <option value="$PROJECT_DIR$/test_cases/q8/3-ParticleObserve.test" />
@@ -182,11 +245,15 @@
         <option value="$PROJECT_DIR$/test_cases/q8/6-ParticleObserve.test" />
         <option value="$PROJECT_DIR$/test_cases/q8/7-ParticleObserve.test" />
         <option value="$PROJECT_DIR$/test_cases/q8/8-gameScoreTest.test" />
+        <option value="$PROJECT_DIR$/loop_counter.txt" />
+        <option value="$PROJECT_DIR$/test_cases/q4/8-gameScoreTest.test" />
+        <option value="$PROJECT_DIR$/test_cases/CONFIG" />
         <option value="$PROJECT_DIR$/inference.py" />
+        <option value="$PROJECT_DIR$/README" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1920" />
     <option name="height" value="993" />
@@ -208,18 +275,7 @@
             <path>
               <item name="mc_sampling" type="b2602c69:ProjectViewProjectNode" />
               <item name="mc_sampling" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mc_sampling" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mc_sampling" type="462c0819:PsiDirectoryNode" />
               <item name="test_cases" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mc_sampling" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mc_sampling" type="462c0819:PsiDirectoryNode" />
-              <item name="test_cases" type="462c0819:PsiDirectoryNode" />
-              <item name="q8" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -236,13 +292,14 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test_cases/q4" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/test_cases" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/test_cases/q8" />
       <recent name="$PROJECT_DIR$/test_cases/q3" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/test_cases" />
-      <recent name="$PROJECT_DIR$/test_cases/q4" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -323,7 +380,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542386893473</updated>
-      <workItem from="1543783812398" duration="11275000" />
+      <workItem from="1543783812398" duration="11456000" />
+      <workItem from="1543865143314" duration="1167000" />
     </task>
     <task id="LOCAL-00001" summary="Fixing some problems with matplotlib, and MacOS. also initializing self.particle_size">
       <created>1543773711139</created>
@@ -360,16 +418,24 @@
       <option name="project" value="LOCAL" />
       <updated>1543795669046</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="working on the demo">
+      <created>1543814841347</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1543814841347</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11275000" />
+    <option name="totallyTimeSpent" value="12623000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="713" extended-state="6" />
+    <frame x="0" y="23" width="1920" height="993" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3441034" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1517572" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -383,7 +449,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3307436" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007153" side_tool="true" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49928468" visible="true" weight="0.37037036" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49928468" visible="true" weight="0.24195339" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3263041" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -426,168 +492,94 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test_cases/q4/1-ParticleObserve.test">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1959">
-          <caret line="1663" selection-start-line="1663" selection-end-line="1663" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../fsl_hw/k_means.py" />
-    <entry file="file://$PROJECT_DIR$/graphicsUtils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-28" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/textDisplay.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-28" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testParser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-28" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testClasses.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="83" column="37" selection-start-line="83" selection-start-column="36" selection-end-line="83" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projectParams.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pacman.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_cases/q2/4-ExactElapse.test">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bustersGhostAgents.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/busters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="47" column="30" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/layout.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-28" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_cases/q4/6-ParticleObserve.test">
+    <entry file="file://$PROJECT_DIR$/test_cases_old/q4/6-ParticleObserve.test">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_cases/q3/3-gameScoreTest.solution">
+    <entry file="file://$PROJECT_DIR$/test_cases_old/q3/3-gameScoreTest.solution">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_cases/q3/CONFIG">
+    <entry file="file://$PROJECT_DIR$/test_cases_old/q3/CONFIG">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_cases/q3/3-gameScoreTest.test">
+    <entry file="file://$PROJECT_DIR$/test_cases_old/q3/3-gameScoreTest.test">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="26" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_cases/q4/7-ParticleObserve.test">
+    <entry file="file://$PROJECT_DIR$/test_cases_old/q4/7-ParticleObserve.test">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="26" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_cases/q4/CONFIG">
+    <entry file="file://$PROJECT_DIR$/test_cases_old/q4/CONFIG">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loop_counter.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/layouts/oneHunt.lay">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_cases/q1/4-ExactObserve.test">
+    <entry file="file://$PROJECT_DIR$/test_cases_old/q1/4-ExactObserve.test">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_cases/q1/4-ExactObserve.solution">
+    <entry file="file://$PROJECT_DIR$/test_cases_old/q1/4-ExactObserve.solution">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/layouts/bigHunt.lay">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/README">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="6" selection-start-line="1" selection-end-line="1" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_cases/q8/1-ParticleObserve.solution">
+    <entry file="file://$PROJECT_DIR$/test_cases_old/q8/1-ParticleObserve.solution">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_cases/CONFIG">
+    <entry file="file://$PROJECT_DIR$/test_cases_old/CONFIG">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_cases/q8/2-ParticleObserve.solution">
+    <entry file="file://$PROJECT_DIR$/test_cases_old/q8/2-ParticleObserve.solution">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_cases/q8/2-ParticleObserve.test">
+    <entry file="file://$PROJECT_DIR$/test_cases_old/q8/2-ParticleObserve.test">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_cases/q8/3-ParticleObserve.test">
+    <entry file="file://$PROJECT_DIR$/test_cases_old/q8/3-ParticleObserve.test">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_cases/q8/4-ParticleObserve.test">
+    <entry file="file://$PROJECT_DIR$/test_cases_old/q8/4-ParticleObserve.test">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_cases/q8/5-ParticleObserve.test">
+    <entry file="file://$PROJECT_DIR$/test_cases_old/q8/5-ParticleObserve.test">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_cases/q8/6-ParticleObserve.test">
+    <entry file="file://$PROJECT_DIR$/test_cases_old/q8/6-ParticleObserve.test">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="434">
           <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_cases/q8/CONFIG">
+    <entry file="file://$PROJECT_DIR$/test_cases_old/q8/CONFIG">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file:///anaconda2/envs/Python27Clean/lib/python2.7/site-packages/scipy/stats/_distn_infrastructure.py">
@@ -604,19 +596,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_cases/q8/1-ParticleObserve.test">
+    <entry file="file://$PROJECT_DIR$/test_cases_old/q8/1-ParticleObserve.test">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="11" lean-forward="true" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_cases/q4/3-ParticleObserve.solution">
+    <entry file="file://$PROJECT_DIR$/test_cases_old/q4/3-ParticleObserve.solution">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-162" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_cases/q8/7-ParticleObserve.test">
+    <entry file="file://$PROJECT_DIR$/test_cases_old/q8/7-ParticleObserve.test">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="30" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="30" />
@@ -625,46 +617,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Adaptive particle filtering.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inference.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="273" column="68" selection-start-line="273" selection-start-column="68" selection-end-line="273" selection-end-column="68" />
-          <folding>
-            <element signature="e#656#672#0" expanded="true" />
-            <marker date="1543808985869" expanded="true" signature="967:971" ph="..." />
-            <marker date="1543808985869" expanded="true" signature="16615:16624" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bustersAgents.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_cases/q8/8-gameScoreTest.solution">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_cases/q8/8-gameScoreTest.test">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layouts/smallHunt.lay">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graphicsDisplay.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-237" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="470" column="4" selection-start-line="470" selection-start-column="4" selection-end-line="470" selection-end-column="4" />
-        </state>
-      </provider>
     </entry>
     <entry file="file:///anaconda2/envs/Python27Clean/lib/python2.7/site-packages/pandas/core/dtypes/inference.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -676,24 +628,124 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trackingTestClasses.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="140" selection-start-line="140" selection-end-line="140" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/graphicsDisplay.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/grading.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-921">
+        <state relative-caret-position="675">
           <caret line="51" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/trackingTestClasses.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1905">
+          <caret line="140" selection-start-line="140" selection-end-line="140" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bustersAgents.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_cases_old/q8/8-gameScoreTest.test">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layouts/smallHunt.lay">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_cases_old/q8/8-gameScoreTest.solution">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/autograder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
+        <state relative-caret-position="-1600">
           <caret line="202" column="42" selection-start-line="202" selection-start-column="42" selection-end-line="202" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VERSION">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7005">
+          <caret line="470" column="4" selection-start-line="470" selection-start-column="4" selection-end-line="470" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KLD_run.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_cases/q1/CONFIG">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_cases/q4/7-ParticleObserve.solution">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_cases/q3/3-gameScoreTest.test">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_cases/q3/3-gameScoreTest.solution">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_cases/q4/7-ParticleObserve.test">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_cases/q4/8-gameScoreTest.test">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_cases/q8/8-gameScoreTest.test">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_cases/q8/8-gameScoreTest.solution">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_cases/q4/8-gameScoreTest.solution">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loop_counter.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_cases/CONFIG">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inference.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="411" column="20" selection-start-line="411" selection-start-column="20" selection-end-line="411" selection-end-column="20" />
+          <folding>
+            <element signature="e#656#672#0" expanded="true" />
+            <marker date="1543865629631" expanded="true" signature="967:971" ph="..." />
+            <marker date="1543865629631" expanded="true" signature="16610:16619" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
