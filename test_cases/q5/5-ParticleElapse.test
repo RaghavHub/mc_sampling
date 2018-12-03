@@ -1,37 +1,26 @@
-class: "DoubleInferenceAgentTest"
+class: "GameScoreTest"
 
-seed: "188"
+numRuns: "5"
+numWinsForCredit: "4"
+layout_name: "smallHunt"
+min_score: "300"
 
-layout: """
-%%%%%%%%%%%%%%%
-%      G      %
-% %%%%%%%%%%% %
-% %         % %
-% %         % %
-% %         % %
-% %         % %
-% %    P    % %
-% %         % %
-% %         % %
-% %         % %
-% %         % %
-% %%%%%%%%%%% %
-%      G      %
-%%%%%%%%%%%%%%%
-% % %%%%%%%%%%%
-%%%%%%%%%%%%%%%
+layout_str: """
+%%%%%%%%%%%%%%%%%%%%
+%P        G        %
+% %%%%% %%%%%% % % %
+%     G            %
+%                  %
+%%%%%%%%%%%%%%%%%%%%
+% % %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
 """
 
 observe: "True"
-
 elapse: "True"
-
-checkUniform: "False"
 maxMoves: "100"
-
-numGhosts: "2"
 ghost: "SeededRandomGhostAgent"
 inference: "ParticleFilter"
-L2Tolerance: "0.05"
-errorMsg: "Particle filter full test: %d inference errors."
+numGhosts: "2"
+
 
