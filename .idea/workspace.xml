@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57668349-0859-4e4c-87bd-7f10c4371a25" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/tracking.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tracking.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adaptive particle filtering.png" beforeDir="false" afterPath="$PROJECT_DIR$/Adaptive particle filtering.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KLD_run.py" beforeDir="false" afterPath="$PROJECT_DIR$/KLD_run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inference.py" beforeDir="false" afterPath="$PROJECT_DIR$/inference.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loop_counter.txt" beforeDir="false" afterPath="$PROJECT_DIR$/loop_counter.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q5/6-ParticleElapse.solution" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases/q5/5-ParticleElapse.solution" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q5/6-ParticleElapse.test" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases/q5/5-ParticleElapse.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q5/5-ParticleElapse.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q5/5-ParticleElapse.test" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,10 +58,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/KLD_run.py">
+        <entry file="file://$PROJECT_DIR$/loop_counter.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="241" column="23" selection-start-line="241" selection-start-column="23" selection-end-line="241" selection-end-column="23" />
+            <state>
+              <caret column="2" selection-start-column="2" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -124,12 +119,12 @@
         <option value="$PROJECT_DIR$/test_cases/q8/6-ParticleObserve.test" />
         <option value="$PROJECT_DIR$/test_cases/q8/7-ParticleObserve.test" />
         <option value="$PROJECT_DIR$/test_cases/q8/8-gameScoreTest.test" />
-        <option value="$PROJECT_DIR$/loop_counter.txt" />
         <option value="$PROJECT_DIR$/test_cases/q4/8-gameScoreTest.test" />
         <option value="$PROJECT_DIR$/test_cases/CONFIG" />
         <option value="$PROJECT_DIR$/README" />
         <option value="$PROJECT_DIR$/inference.py" />
         <option value="$PROJECT_DIR$/KLD_run.py" />
+        <option value="$PROJECT_DIR$/loop_counter.txt" />
       </list>
     </option>
   </component>
@@ -279,7 +274,7 @@
       <option name="presentableId" value="Default" />
       <updated>1542386893473</updated>
       <workItem from="1543783812398" duration="11456000" />
-      <workItem from="1543865143314" duration="3758000" />
+      <workItem from="1543865143314" duration="3813000" />
     </task>
     <task id="LOCAL-00001" summary="Fixing some problems with matplotlib, and MacOS. also initializing self.particle_size">
       <created>1543773711139</created>
@@ -337,17 +332,24 @@
       <option name="project" value="LOCAL" />
       <updated>1543867299483</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Done">
+      <created>1543873360708</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1543873360708</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15214000" />
+    <option name="totallyTimeSpent" value="15269000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="993" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1517572" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1517572" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -361,7 +363,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3307436" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007153" side_tool="true" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49928468" visible="true" weight="0.34517202" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49928468" visible="true" weight="0.34517202" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3263041" />
       <window_info anchor="right" x="0" y="0" width="430" height="793" id="Documentation" side_tool="true" weight="0.32960597" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -383,7 +385,8 @@
     <MESSAGE value="working on the demo" />
     <MESSAGE value="working on run script and readme file" />
     <MESSAGE value="ID" />
-    <option name="LAST_COMMIT_MESSAGE" value="ID" />
+    <MESSAGE value="Done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -610,13 +613,6 @@
     <entry file="file://$PROJECT_DIR$/test_cases/q4/8-gameScoreTest.solution">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/loop_counter.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/trackingTestClasses.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-6870">
@@ -652,6 +648,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/KLD_run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="241" column="23" selection-start-line="241" selection-start-column="23" selection-end-line="241" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -659,10 +662,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KLD_run.py">
+    <entry file="file://$PROJECT_DIR$/loop_counter.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="241" column="23" selection-start-line="241" selection-start-column="23" selection-end-line="241" selection-end-column="23" />
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
         </state>
       </provider>
     </entry>
