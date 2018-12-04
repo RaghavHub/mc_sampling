@@ -499,13 +499,14 @@ class ParticleFilter(InferenceModule):
         pacmanPosition = gameState.getPacmanPosition()
 
         bin = util.Counter()
-        n_kld = 0
-        k = 1
-        d = 999.1 / 1000
-        e = 1.0 / 6
-        n = 0
-        nK = 5000
-        ls_particles = []
+        n_kld = 0 # Adaptive sample size
+        k = 1 # Number of bins
+        d = 999.1 / 1000 # Accuracy
+        e = 1.0 / 6 #constant
+        n = 0 # number of loops
+        nK = 5000 # Threshold
+        ls_particles = [] # Particles list
+        fill = 'NE'
 
         if noisyDistance == None:  # Case 1
             self.particles = [self.getJailPosition()] * self.numParticles
@@ -520,19 +521,19 @@ class ParticleFilter(InferenceModule):
                 # Adaptive Monte Carlo sampling
                 condition = True
                 while condition:
-                    sample = util.sample(allPossible)  # else, resample all the particles
-                    ls_particles.append(sample)
-                    if bin[sample] != 'NE':
-                        k = k + 1
-                        bin[sample] = 'NE'
+                    sample = util.sample(allPossible)  # select a random sample
+                    ls_particles.append(sample) #add the sample to the list of particles
+                    if bin[sample] != fill: # checks if the bin is empty
+                        k = k + 1 # update the number of bins with support
+                        bin[sample] = fill # mark the bin
                         if k > 1:
                             q = scipy.stats.norm.ppf(d)
                             t = (1.0 - (2.0 / 9.0 * (k - 1)) + np.sqrt(2.0 / 9.0 * (k - 1)) * q)
-                            n_kld = int(((k - 1) / (2.0 * float(e))) * float((t) ** 3))
+                            n_kld = int(((k - 1) / (2.0 * float(e))) * float((t) ** 3))  #calculate KLD
                     n = n + 1
                     condition = (n < n_kld) and (n < nK)
                 self.particles = ls_particles
-                self.numParticles = n_kld
+                self.numParticles = n_kld # alter the particle size
                 self.particle_size.append(len(self.particles))
 
     def elapseTime(self, gameState):
@@ -711,6 +712,8 @@ class JointParticleFilter:
         e = 1
         n = 0
         nK = 5000
+        ls_particles =[]
+        fill ='NE'
         allPossible = util.Counter()
         self.particle_size = []
         for index, pos in enumerate(self.particles):
@@ -737,23 +740,20 @@ class JointParticleFilter:
             #     dist.append(util.sample(allPossible))
             condition = True
             while condition:
-                print allPossible
-                sample = util.sample(allPossible)  # else, resample all the particles
-                dist.append(sample)
-                if bin[sample] != 'NE':
-                    k = k + 1
-                    bin[sample] = 'NE'
+                sample = util.sample(allPossible)  # select a random sample
+                ls_particles.append(sample)  # add the sample to the list of particles
+                if bin[sample] != fill:  # checks if the bin is empty
+                    k = k + 1  # update the number of bins with support
+                    bin[sample] = fill  # mark the bin
                     if k > 1:
                         q = scipy.stats.norm.ppf(d)
                         t = (1.0 - (2.0 / 9.0 * (k - 1)) + np.sqrt(2.0 / 9.0 * (k - 1)) * q)
-                        n_kld = int(((k - 1) / (2.0 * e)) * ((t) ** 3))
+                        n_kld = int(((k - 1) / (2.0 * float(e))) * float((t) ** 3))  # calculate KLD
                 n = n + 1
                 condition = (n < n_kld) and (n < nK)
-            self.particles = dist
-            # print "self.particles",len(self.particles)
-            self.numParticles = n_kld
-            self.particle_size.append(self.numParticles)
-            # print len(self.particles)
+            self.particles = ls_particles
+            self.numParticles = n_kld  # alter the particle size
+            self.particle_size.append(len(self.particles))
 
     def getParticleWithGhostInJail(self, particle, ghostIndex):
         """
