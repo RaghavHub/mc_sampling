@@ -551,8 +551,7 @@ class ParticleFilter(InferenceModule):
         """
         "*** YOUR CODE HERE ***"
         # util.raiseNotDefined()
-        self.particles = [util.sample(self.getPositionDistribution(self.setGhostPosition(gameState, oldPos))) for oldPos
-                          in self.particles]
+        self.particles = [util.sample(self.getPositionDistribution(self.setGhostPosition(gameState, oldPos))) for oldPos in self.particles]
 
     def getBeliefDistribution(self):
         """
