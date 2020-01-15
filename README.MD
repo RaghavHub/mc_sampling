@@ -2,10 +2,10 @@
 
 ## Contributers
 
-Arun Vignesh Malarkkan
-Gowtham Sekkilar
-Raghavendran Ramakrishnan
-Faisal Alatawi
+Arun Vignesh Malarkkan  
+Gowtham Sekkilar  
+Raghavendran Ramakrishnan  
+Faisal Alatawi  
 
 Arizona State University
 Dec 3, 2018
@@ -36,8 +36,8 @@ We altered the dynamic ghost buster game to use the Adaptive sampling.The GUI al
 
 ## Switch to the ghostbuster project
 
- -To run the ghostbuster game:
+     -To run the ghostbuster game:
 
-  python ghostbusters.py -w -m center -i approximate -k 1 --fixrandomseed -n 0.3 -l medium -n 0.8
+      python ghostbusters.py -w -m center -i approximate -k 1 --fixrandomseed -n 0.3 -l medium -n 0.8
 
 
